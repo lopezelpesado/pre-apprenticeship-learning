@@ -27,7 +27,7 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 
 ### Twitter TIL or retweet
 
-- [ ] 18/6
+- [x] 18/6 https://twitter.com/LopezelPesado/status/1405931877945511936
 - [ ] 21/6
 - [ ] 22/6
 - [ ] 23/6
@@ -38,7 +38,7 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 
 ### Execute Program
 
-- [ ] 18/6
+- [x] 18/6 Strict Mode
 - [ ] 21/6
 - [ ] 22/6
 - [ ] 23/6
