@@ -60,3 +60,34 @@
 
 ### Creating and Modifying Files
 
+- `.txt` files can be read on the command-line
+- The `touch` command can be used to create or modify an exsisting file, you pass the name of the file as an argument
+- The `echo` command is used to display strings of text in Linux but it can also be used to creare a new file with text in it or put text in an exsisting file by using the redirection operater `>` and putting the name of the file after that
+- The `cat` command (for concatenate) can be used to show the contents of the passed file
+- There are command-line text editors for modifying text like Vim, Emacs and nano.
+- The `nano` command followed by the name of the file you want to edit will open it up in the nano commandline-editor
+  - At the bottom of the terminal are some controls, exit is listed as `^X` but to do this you need to press `CTRL` and the `x` key
+- The `mv` (move) command allows you to change the location of a file, the first argument passed to it is the file to be moved and the second is where you want to used it (location can be relative). An absolute path to the same location but with a different name can be used to rename the file
+- `cp` (copy) command works similarly to `cp` but copies the file instead
+
+### Autocomplete and History
+
+- Commandlines allow you to autocomplete and reuse commands
+- For example, you can autocomplete a file name by typing the first few letters and pressing `TAB`
+- Pressing `UP` will cycle through previously used commands
+- The `history` command will show you a list of all the commands you've used this session
+
+### Web Files
+
+- Using a command-line connected to the web allows you to do lots of stuff on the web
+- `curl` (client URL) allows us to transfer data from the web to the command-line
+  - `-O` flag lets us output text from `curl` to a file
+  - `-o` lets you put a file name argument before the URL to output to a specific file or new file name
+
+### Removing Files and Terminating Commands
+
+- `rm` (remove) can be used to delete a file, this cannot be undone 😬
+  - To remove a directory that is not empty you can use the `-r` (recursive) flag and then the directory to to remove it and the stuff inside
+- `rmdir` (remove directory) can be used to delete whole directories
+  - Doesn't work of directories that are not empty
+- When you are finished with the terminal you, you can use the `exit` command to exit
