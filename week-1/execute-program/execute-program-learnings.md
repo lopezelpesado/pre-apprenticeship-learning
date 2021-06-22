@@ -2,7 +2,7 @@
 
 ## 18/6/21
 
-### Modern JavaScript Lesson: Strict Mode
+### Modern JavaScript: Strict Mode
 
 - I've learned from this [Execute Program (EP) guide](https://www.executeprogram.com/courses/modern-javascript/articles/how-to-run-javascript-code) that I can run my JavaScript (JS) using Node.js from my Linux terminal. If I type `node --use_strict`, it'll open up a REPL in strict mode (what EP use) and if I add a JS file name at the end it'll run that file in strict mode, nice!
 - Apparently we rarely want global variables (like `x = 1`) and "strict mode" prevents this.
@@ -14,12 +14,14 @@
 
 ## 21/6/21
 
-### Review: Strict Mode
+### Review
+
+#### Strict Mode
 
 - Strict mode prevents global variable declartions such as `x = 1`, will return an error
 - Also prevents deletion of entire variables
 
-### Modern JavaScript Lesson: Let
+### Modern JavaScript: Let
 
 - Local variables used to be declared with the `var` keyword. Inside a function, it's only visible in the function. `var` can be used in strict mode
 - Trying to reference a local variable outside of the scope in which it's defined will give an error
@@ -29,3 +31,49 @@
 - The `let` keyword fixes this
 - Variable shadowing is when a certain scope has the same name as a variable outside that scope
 - We don't need a construct like `if` or `while` to create a new scope. Any code within `{}` will have its own scope
+
+## 22/6/21
+
+### Review
+
+#### Let
+
+- `let` is block scoped and so a variable declared with `let` inside a block (`{}`) is not available outside it
+- Similarly, `const` is also block scoped
+
+### Modern JavaScript: Const
+
+- Variables defined with `const` can't be reassigned
+- However, the value assigned to the variable can be mutated (changed)
+- `const` applies to the variable and not its value
+- We can shadow `const`, define variables with the same name in different scopes#
+- `var` doesn't need to be used and can be replaced with `let` and `const`
+- You can configure your linter (code analyser that flags errors and bugs) to disallow `var` and force you to use `const` for variables that are never reassigned, recommended
+
+### Modern JavaScript: For of loops
+
+- `for...in` loops iterate over an object's keys and not values
+- This can cause strange edge cases
+- Arrays are a special kind of object and `typeof` on an array will return `"object"`
+- An arrays keys are their indexes as strings
+- An array can be "sparse", they can have indexes with nothing in them at all
+- `for...in` skips missing array elements, if we have an empty array `arr = []` and put a value at index 3 `arr[3] = "a"` then a `for...in` would return ["3"]
+- This can cause bugs when not expected
+- `for...of` is better as it loops over the values not the keys
+- With a "sparse" array, it will loop over the missing indexes and return `undefined`
+- We can iterate over the keys of an object like `for...in` does by using `for...of` on an `Object.keys()` array of the object
+- `for...of` can be used to iterate over strings, will handle each character as a string with length 1
+- Linters can stop you from using the old `for...in` syntax
+
+### Modern JavaScript: Template literals
+
+- JS has 2 syntaxes for strings `"string"` and `'string'`, but wait! There is a third, `` `string` `` with backticks `` ` ``
+- The third type are called "template literals"
+- "Interpolation" (inserting something into something else) is the most common use
+- Wrapping an expression with `${}` will insert the result of that expression into the string
+- `${}` converts the value to a string by calling its `.toString()` method, probably won't do what we want with arrays and definitely not with objects
+- We can use `${}` as many times as we want in a template literal
+- Escaping works inside template literals
+- Strings can't have newlines in them
+- Template literals can
+- Template literals will include all whitespace, including indentation. Not normally a problem between HTML tags

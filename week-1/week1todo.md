@@ -29,7 +29,7 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 
 - [x] 18/6 https://twitter.com/LopezelPesado/status/1405931877945511936
 - [x] 21/6 https://twitter.com/LopezelPesado/status/1407019251131629570
-- [ ] 22/6
+- [x] 22/6 https://twitter.com/LopezelPesado/status/1407366667559182340
 - [ ] 23/6
 - [ ] 24/6
 - [ ] 25/6
@@ -40,7 +40,7 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 
 - [x] 18/6 Strict Mode
 - [x] 21/6 Let
-- [ ] 22/6
+- [x] 22/6 Const, For of loops, Template literals
 - [ ] 23/6
 - [ ] 24/6
 - [ ] 25/6
