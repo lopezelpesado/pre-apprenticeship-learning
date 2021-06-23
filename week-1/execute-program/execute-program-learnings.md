@@ -77,3 +77,30 @@
 - Strings can't have newlines in them
 - Template literals can
 - Template literals will include all whitespace, including indentation. Not normally a problem between HTML tags
+
+## 23/6/21
+
+### Review
+
+#### For of loops
+
+- `for...of` loops don't skip missing indexes
+
+#### Template literals
+
+- `${}` (interpolation) will return the `.toString()` of the expression inside
+- Template literals keep newlines
+
+#### Const
+
+- `const` is block scoped (not accessible outside the scope it is declared in)
+- It can also be shadowed (have 2 variables with the same name in different scopes)
+- `const` can't be reassigned
+
+### Modern JavaScript: Rest parameters
+
+- JS functions can take a variable number of parameters which can be achieved using `...` (rest parameter, called varargs in other languages or variable number of arguments)
+- Arguments will show up as a single array of the arguments passed
+- Can be used in conjuction with regular parameters but not after a rest parameter (doing so will throw an error)
+- You can only have 1 rest parameter, multiple will throw an error
+- Can also be used when calling functions to pass all the elements of an array (for example) into a function as seperate arguments
