@@ -104,3 +104,54 @@
 - Can be used in conjuction with regular parameters but not after a rest parameter (doing so will throw an error)
 - You can only have 1 rest parameter, multiple will throw an error
 - Can also be used when calling functions to pass all the elements of an array (for example) into a function as seperate arguments
+
+### Modern JavaScript: Accessors in object literals
+
+- Object properties' values can't change over time unless we modify the object with normal object syntax
+- You can have objects with dynamic properties, instead of a fixed value they hold a function that is called when the property is accessed
+- Instead of a property name in an object you have `get` followed by a function
+- These properties are called getters
+- There are also setters, these write to objects
+- Writing to an object's key replaces the value at the key
+- A setter property contains a function like a getter but the function takes one argument, the value being written to the key
+- Reading the value of a setter returns `undefined`
+- You can combine a getter and setter in one object, one handles getting and the other handles setting
+- You can use setters to track changes over time, code can modify an object in the normal way but the setter can keep track of what happened
+- `get` and `set` are required otherwise a function will be called in the normal way
+
+### Modern JavaScript: Computed properties
+
+- In an object, we can write keys as unquoted words
+- We can have computed keys by wrapping the key in `[]`
+- A computed key can contain any expression
+
+### Modern JavaScript: Shorthand properties
+
+- Historically, the key of an object refers to a variable of the same name
+- We can shorten this when an object's key refers to a variable of the same name, instead of `{name: name}` we can just write `{name}`
+- You can't refer to a variable that doesn't exsist as this will throw an error
+
+### Modern JavaScript: isNaN
+
+- `NaN` is a problem in JS
+- NaN means Not a Number
+- Originally wasn't supposed to be used a lot, `0/0` should return `NaN`, but JS returns it a lot.
+- Arithmetic on `undefined` return `NaN`
+- Operating on `NaN` returns `NaN`
+- JS returns `NaN`s when it doesn't need to, other languages don't do this
+- `NaN`s can be checked for with the `isNaN` function
+- `isNaN` converts arguments to numbers before checking
+- `isNaN(undefined)` returns `true` because any arithmetic on `undefined` produces `NaN`
+- `Number.isNaN` fixes this
+- You can use linters to disallow `isNaN`
+
+### Modern JavaScript: Generators
+
+- `for...in` loops only work with arrays and strings, `for...of` is newer but seems to have the same limitation
+- Can't iterate over an object
+- You can write new functions and objects that work with for loops
+- A `*` after `function` denotes a generator
+- When you call a generator, you get an object that can be looped over
+- Each `yield` in the generator provides one value to the loop
+- Yield works like return but the function continues after each yield
+- Generators are functions so can contain code normally found in a function
