@@ -155,3 +155,44 @@
 - Each `yield` in the generator provides one value to the loop
 - Yield works like return but the function continues after each yield
 - Generators are functions so can contain code normally found in a function
+
+## 24/6/21
+
+### JavaScript Arrays: Basics
+
+- Arrays are sequences of values that have a specific order and length
+- Values can be retrieved from arrays using `[]`
+- Indexes start at 0
+- Array elements can be replaced by retrieving them with `[]` and assigning them with `=`
+
+### JavaScript Arrays: Stack
+
+- Elements can be added to the end of arrays with `push`
+- `push` returns the new array's length
+- `pop` is the opposite of `push` and removes elements from the end
+- `pop` returns the removed element
+- Some array methods return a new array whereas `push` and `pop` modify the array when called
+
+### JavaScript Arrays: For each
+
+- `forEach` executes a function once for each element in an array
+- `forEach` can be used to modify an array's elements
+- The callback function can reference and modify variables defined in outer scopes
+- The second argument to `forEach`'s callback is the current item's index
+- Functions can be stored in variables and variables can be passed to `forEach`
+
+### JavaScript Arrays: Slice
+
+- `slice` allows us to acces just smol bit of an array
+- First argument is where to begin
+- Second is where to end (not inclusive)
+- Slicing beyond the end of an array is the same as slicing right up to the last element (inclusive)
+- If the start is past the end of the array, we get an empty result
+- With no arguments, `slice` slices the lot and gives you a copy of the array
+- `slice` is commonly used for copying arrays
+
+### JavaScript Arrays: Slice with negative arguments
+
+- `slice` can take negative indexes which you can think of `array.length - i`
+- Slicing before the start of an array will give you the whole array
+- Both parguments can be negative, the second index is not included in the slice

@@ -31,18 +31,18 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 - [x] 21/6 https://twitter.com/LopezelPesado/status/1407019251131629570
 - [x] 22/6 https://twitter.com/LopezelPesado/status/1407366667559182340
 - [x] 23/6 https://twitter.com/LopezelPesado/status/1407721875338403840
-- [ ] 24/6
+- [x] 24/6 https://twitter.com/LopezelPesado/status/1408076219829129217
 - [ ] 25/6
 - [ ] 28/6
 - [ ] 29/6
 
 ### Execute Program
 
-- [x] 18/6 Strict Mode
-- [x] 21/6 Let
-- [x] 22/6 Const, For of loops, Template literals
-- [x] 23/6 Rest parameters, Accessors in object literals, Computed properties, Shorthand properties, isNaN, Generators
-- [ ] 24/6
+- [x] 18/6 Modern JS: Strict Mode
+- [x] 21/6 Modern JS: Let
+- [x] 22/6 Modern JS: Const, For of loops, Template literals
+- [x] 23/6 Modern JS: Rest parameters, Accessors in object literals, Computed properties, Shorthand properties, isNaN, Generators
+- [x] 24/6 Arrays: Basics, Stack, For each, Slice, Slice with negative arguments
 - [ ] 25/6
 - [ ] 28/6
 - [ ] 29/6
