@@ -91,3 +91,68 @@
 - `rmdir` (remove directory) can be used to delete whole directories
   - Doesn't work of directories that are not empty
 - When you are finished with the terminal you, you can use the `exit` command to exit
+
+## [An Introduction to the Linux Terminal](https://www.digitalocean.com/community/tutorials/an-introduction-to-the-linux-terminal)
+
+### The Shell
+
+- The shell is a command-line interface that inteprests a user's commands
+- Examples include Bourne shell (`sh`) and C shell (`csh`), each has their own features
+- The Bourne-Again shell or `bash` is the default shell for most Linux distributions
+
+### The Command Prompt
+
+- `sammy@webapp:~$`
+  - `sammy` is the username
+  - `webapp` is the hostname
+  - `~` is the current directory (`~` is the home directory)
+  - `$` is the prompt symbol (`#` if logged in as `root`)
+
+### Executing Commands
+
+- An instance of a running command is called a process
+- When a command is executed in the foregroud (the default), you must wait for the process to finish
+- Almost everything in Linux is case sensitive
+
+#### Without Arguments or Options
+
+- Running a command without options will mean it runs with its default behaviour
+- `cd` will return you to the home directory
+- `ls` will print a list of the current directories files and directories
+- `ip` will print a message telling you how to use it
+
+#### With Arguments
+
+- Many commands take arguments or parameters
+- `cd` can be used with an argument that specifies where you want to go
+
+#### With Options
+
+- Most commands take options (or flags or switches)
+- They are indicated with a `-` followed by a single letter
+- Some start with `--` followed by a word
+- `ls` with `-l` will print a long listing with extra info
+- with `-a` will print all files including hidden ones
+- `-l -a` can be shortened to `-la`
+- Options and arguments can be combined
+
+### Environment Variables
+
+- Environment variables are named values that change how commands and processes are executed.
+- When you log in, several of them will be set according to configs by default
+
+#### View All Environment Variables
+
+- `env` can be used to view all environment variables, look for the `PATH` entry
+- The `PATH` environment variable is a list of directories where the shell will look for executable programs or scripts when a command is issued, means we don't have to give a full location for commands
+
+#### View the Value of a Variable
+
+- You can get a environment variable by putting a `$` before its name
+
+#### Setting Environment Variables
+
+- You can set an environment variable using this syntax `VAR=value`
+- The original value will be replaced or if there wasn't that variable, a new one will be created
+- Bash has `export` which exports a variable so that it will be inherited by a child process
+- Setting environment variables with export only sets them for this session

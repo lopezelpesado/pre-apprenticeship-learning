@@ -5,7 +5,7 @@ Here's the [schedule for week 1](https://learn.foundersandcoders.com/course/syll
 These are the things I need to do based on the schedule:
 
 - [x] Install all the things!
-- [ ] Learn about the terminal
+- [x] Learn about the terminal
 - [ ] Learn about semantic HTML
 - [ ] Learn about accessibility and building sites for everyone
 - [ ] Sign up for JavaScript 30 and...
