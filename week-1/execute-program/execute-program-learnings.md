@@ -14,7 +14,7 @@
 
 ## 21/6/21
 
-### Review
+### Modern JavaScript: Review
 
 #### Strict Mode
 
@@ -34,7 +34,7 @@
 
 ## 22/6/21
 
-### Review
+### Modern JavaScript: Review
 
 #### Let
 
@@ -80,7 +80,7 @@
 
 ## 23/6/21
 
-### Review
+### Modern JavaScript: Review
 
 #### For of loops
 
@@ -196,3 +196,78 @@
 - `slice` can take negative indexes which you can think of `array.length - i`
 - Slicing before the start of an array will give you the whole array
 - Both parguments can be negative, the second index is not included in the slice
+
+## 25/6/21
+
+### JavaScript Arrays: Review
+
+#### Slice
+
+- First argument is where to start from, 2nd is where to go up to but not include
+- You can use a negative number with `slice` and that will count from the end
+- Starting at an index below 0 will copy the whole array
+- Altering a copy made with slice does not alter the original
+- Calling slice with arguments outside the range of indexes of an array will return an empty array
+
+#### Stack
+
+- `pop` removes and returns the element from the end of an array
+- `pop` alters the array it's called on
+- `push` adds the element to the end of an array and returns the new length
+
+#### For each
+
+- You can access outer scope variables inside a `forEach`
+
+#### Basics
+
+- You can access an element in an array with `array[n]` where n is the index of the element you want
+- You can replace elements at specific indexes in arrays like this `array[index] = newThing`
+
+### Modern JavaScript: Review
+
+#### Strict Mode
+
+- Can't delete variables in strict mode
+- Can't define global variables
+
+#### isNaN
+
+- `undefined` will return true for `isNaN` because `isNaN` performs arithmetic on `undefined` which results in `NaN`
+- `Number.isNaN` does not have this problem and should be used instead
+- `isNaN` can be used to check if something is `NaN`
+
+#### Rest parameters
+
+- Using `...` and an array in place of arguments for a function will pass each element in the array to the function in order
+- Defining a function parameter with `...` means that you can pass any number of arguments to it that will appear in the function as an array
+- You can't have a parameter after a `...`
+
+#### Generators
+
+- Generator functions are denoted with a `*` at the end of `function`
+- You use `yield` instead of return
+- Can turn the `yield` from a generator function into an array with `Array.from(generatorFunction())`
+
+#### Computed properties
+
+- You can use `[]` to set the property of an object with the result of what is inside the `[]`
+
+#### Shorthand properties
+
+- You can create an object which has properties with values the same as predefined variables like this `let name = "something"; let obj = {name}; obj === {name: "something"}`
+
+### Modern JavaScript: Basic array destructuring
+
+- Historically, working with arrays and objects was clunky
+- Destructuring makes it easier by using the structure of arrays
+- You can assign the elements of an array to new variables by using their order `let arr = [1, 2, 3]; let [e1, e2] = arr` now `e1 === 1` and `e2 === 2`
+- Can skip indexes by leaving them blank (called sparse array destructuring) `let [e1, , e3] = arr`
+- Trying to destructure a value that doesn't have structure will result in an error
+- If there aren't enough indexes, the excess indexes will get `undefined`. `let [e1, e2, e3, e4] = arr` now `e4 === undefined`
+- We can provide defaults if the array or object doesn't have something at the index with this syntax `e4 = 4`
+- You can mix and match elements without defaults
+- We can get remaining elements with `...`, `let [e1, ...remains] = arr` now `remains === [2, 3]`
+- `...` are always returned as an array
+- `...` has to go last, otherwise you will get an error
+- Strings can be destructures with each "element" being each character as a string of length 1
