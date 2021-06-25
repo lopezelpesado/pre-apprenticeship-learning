@@ -6,7 +6,7 @@ These are the things I need to do based on the schedule:
 
 - [x] Install all the things!
 - [x] Learn about the terminal
-- [ ] Learn about semantic HTML
+- [x] Learn about semantic HTML
 - [ ] Learn about accessibility and building sites for everyone
 - [ ] Sign up for JavaScript 30 and...
 - [ ] ...complete the JavaScript Drum Kit project and...
