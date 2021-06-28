@@ -271,3 +271,53 @@
 - `...` are always returned as an array
 - `...` has to go last, otherwise you will get an error
 - Strings can be destructures with each "element" being each character as a string of length 1
+
+## 28/6/21
+
+### Modern JavaScript: Review
+
+#### Template literals
+
+- `` ` `` denote template literals
+- `${}` will return the `.toString()` of the result of the expression within the brackets
+
+#### Basic array destructuring
+
+- Using destructuring with a number of variables greater than the length of the array being destructured will result in the variables at indexes greater than the length being assigned `undefined`
+- You can use `...` to assign the rest of an arrays elements to a new array
+- Can skip assigning indexes by just omitting a variable name at that index
+
+#### Let
+
+- `let` is block scoped and can't be accessed outside of scope
+- `let` can be shadowed (variable with the same name in a different scope)
+
+#### Const
+
+- `const` can't be reassigned
+
+#### For of loops
+
+- Will loop over empty indexes and return `undefined` for them
+
+### JavaScript Arrays: Arrays are objects
+
+- JS is unusual because arrays are objects
+- This doesn't affect normal use of arrays
+- This causes weird things though like the fact we can assign to aritary properties of arrays
+- Adding arbitary properties of arrays doesn't change the length
+- Adding arbitary properties is usually a mistake
+- Arbitary properties are unexpected
+- best to use an object rather than have arrays with arbitary properties
+- `forEach` will ignore arbitary properties of arrays
+- `Object.keys` on an array with arbitary properties will return them
+
+### JavaScript Arrays: Map
+
+- `map` calls a function on each element of an array and returns the results as new array
+- `map` doesn't change the original array
+
+### JavaScript Arrays: Join
+
+- `join` without arguments joins with `,`
+- `null` and `undefined` become empty strings with `join`

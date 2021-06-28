@@ -33,7 +33,7 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 - [x] 23/6 https://twitter.com/LopezelPesado/status/1407721875338403840
 - [x] 24/6 https://twitter.com/LopezelPesado/status/1408076219829129217
 - [x] 25/6 https://twitter.com/LopezelPesado/status/1408443739270430724
-- [ ] 28/6
+- [x] 28/6 https://twitter.com/LopezelPesado/status/1409592995607986181
 - [ ] 29/6
 
 ### Execute Program
@@ -44,5 +44,5 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 - [x] 23/6 Modern JS: Rest parameters, Accessors in object literals, Computed properties, Shorthand properties, isNaN, Generators
 - [x] 24/6 Arrays: Basics, Stack, For each, Slice, Slice with negative arguments
 - [x] 25/6 Modern JS: Basic array destructuring
-- [ ] 28/6
+- [x] 28/6 Arrays: Arrays are objects, Map, Join
 - [ ] 29/6
