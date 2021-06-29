@@ -321,3 +321,67 @@
 
 - `join` without arguments joins with `,`
 - `null` and `undefined` become empty strings with `join`
+
+## 29/6/21
+
+### Modern JavaScript: Review
+
+#### Rest parameter
+
+- An array can be passed into a function by using `...` which passes each element as an argument
+- `...` can be used in a functions parameters to accept any number of arguments which will appear as an array in the function
+- `...` must be at the end of a list of parameters otherwise you will get an error
+
+#### isNaN
+
+- Can be used to check if a value is `NaN`
+- `NaN` will return true with `isNaN`
+- `undefined` will return `true` with `isNaN` because arithmetic is performed on it which results in `NaN`
+- Because of this, `Number.isNaN` should be used which will correctly return `false`
+
+#### Generators
+
+- Generator functions are denoted with a `*` just after `function`
+- They use `yield` instead of `return`
+- You can use `Array.from` on the result of a generator function to create an array of the yielded values
+
+#### Shorthand properties
+
+- Shorthand properties must refer to an exsisting variable with the same name
+
+### Modern JavaScript: Shorthand methods
+
+- You can define methods inside an object literal
+- Mehtods defined like this are called shorthand methods
+- Not really related to shorthand properties
+- With shorthand method there is `this` that refers to the parent object, we can access the properties of the parent object like this `this.somePropertyName`
+- Shorthand methods can call other shorthand methods
+- `this` has some sharp edges (not sure what that means but I guess it means watch out for now)
+
+### Modern JavaScript: Basic object destructuring
+
+- Objects can be destructures
+- We pick out keys rather than indexes, `let {key} = object`
+- Trying to destructure `null` or `undefined` will throw an error, like with arrays destructuring
+- If a key doesn't exsist, we'll get undefined
+- We can supply defaults that we'll get if a key doesn't exsist using `let {key=default} = object`
+- `...` will collect the rest of the keys in a new object
+- We can destructure a key into a variable with a different name using `let {key: newKeyName} = object`
+- We can use computed properties with destructuring, useful where we don't know the name of the key in advance. Like this `let {[key]} = object`, `[key]` will be computed with whatever is in the `key` variable at runtime
+- As with other computed properties, we can put any expression inside the `[]`
+- Destructuring interacts nicely with getters
+- If a key is a getter, we can destructure the key and get the value returned by the getter
+
+### Modern JavaScript: Tagged template literals
+
+- Template literals can be tagged where a function is provided with the string
+- The tag function can modify ot replace the string
+- The tag function is written just before the `` ` ``
+- A tagged template literal will break up the literal into the strings first and then the interpolated values
+- The strings are passed as a array argument
+- The interpolate values are passed as rest parameters
+- There's always one more string than value, the last literal string will be an empty string if there's nothing at the end `""` 
+- The tag function can do anything with the arrays
+- [This is an exampe of where this is used in web dev for removing HTML unsafe characters from strings](https://www.npmjs.com/package/common-tags)
+- Strings and values are separated as it would be confusing if the values were strings
+- Important to use semi colons with tagged template literals

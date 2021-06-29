@@ -34,7 +34,7 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 - [x] 24/6 https://twitter.com/LopezelPesado/status/1408076219829129217
 - [x] 25/6 https://twitter.com/LopezelPesado/status/1408443739270430724
 - [x] 28/6 https://twitter.com/LopezelPesado/status/1409592995607986181
-- [ ] 29/6
+- [x] 29/6 https://twitter.com/LopezelPesado/status/1409970993045647364
 
 ### Execute Program
 
@@ -45,4 +45,4 @@ I also need to get active on twitter and work on Execute Program's Modern JavaSc
 - [x] 24/6 Arrays: Basics, Stack, For each, Slice, Slice with negative arguments
 - [x] 25/6 Modern JS: Basic array destructuring
 - [x] 28/6 Arrays: Arrays are objects, Map, Join
-- [ ] 29/6
+- [x] 29/6 Modern JS: Shorthand methods, Basic object destructuring, Tagged template literals
