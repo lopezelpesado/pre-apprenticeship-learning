@@ -10,7 +10,7 @@ I also need to continue to be active on twitter and work on Execute Program's Mo
 
 ### Twitter TIL or retweet
 
-- [] 30/6
+- [x] 30/6 https://twitter.com/LopezelPesado/status/1410313700611866630
 - [] 1/7
 - [] 2/7
 - [] 5/7
