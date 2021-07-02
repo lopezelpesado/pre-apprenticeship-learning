@@ -131,4 +131,44 @@
 
 ### JavaScript Arrays: Review
 
-####
+#### New and fill
+
+- You can create a new and empty array of a given length with `new Array(length)`
+- Calling `.fill(element)` imeddiately after will fill your new array with the given element
+
+#### flat and flatMap
+
+- `flat` flattens down a given depth
+- `Infinity` can be used for depth to completely flatten an array with an unknown level of depth
+- Objects and their values are not flattened, an array inside an object inside an array will not be flattened
+- Doesn't alter the original
+- `flatMap` can be used to `map` then `flat`en the result
+
+#### Includes
+
+- Includes returns `true` or `false` depending on whether or not the given element appears in an array
+
+#### Index of
+
+- `.indexOf` returns the index of the firs occurence of a given element or `-1` if the element does not appear in the array
+
+#### Sort
+
+- `.sort` returns the array sorted in place, doesn't make a copy and alters the original
+- By default, sort converts the elements to strings and compares them 1 character at a time and moves on to the next number where a difference is encountered so numbers can get sorted by just the first number
+- You can provide your own sort function for a custom sort
+
+#### Concat
+
+- `.concat` joins a given array to the array it's called on and returns the new array
+- It doesn't alter the originals
+
+### JavaScript Arrays: Some and every
+
+- `some` checks to see if a function is true for any element in an array
+- It returns `true` if any element satisfies the condition or `false` if none of them do
+- `some` always returns `false` for an empty array
+- `every` is similar but it only returns `true` if all elements satisfy the condition
+- `every` returns `true` for an empty array
+- There is no `none` in JS but we can use `!some` instead
+- We could define our own function for `none`
