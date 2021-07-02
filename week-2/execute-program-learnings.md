@@ -94,3 +94,41 @@
 - `flat` often goes with `map`
 - We can use `flatMap` instead
 - `flat` and `flatMap` return a new array leaving the original untouched
+
+## 1/7/21
+
+### Modern JavaScript: Review
+
+#### Basic object destructuring
+
+- We can destructure objects like arrays
+- We can destructure a getter key which will assign the result of the function to the variable
+- `...` can be used to return the rest of the keys in a new object
+
+#### Shorthand methods
+
+- Object keys can be functions
+- These functions can reference the object's properties with `this.property`
+
+### Modern JavaScript: Places where destructuring is allowed
+
+- Destructuring works in function definitions in the same way it works elsewhere
+- You can destructure an object or array into a single variable to be used in a function
+- You can also use destructuring in for of loops
+- Can be used in `catch` block (I don't know what that is right now though)
+
+### Modern JavaScript: Bind
+
+- `this` refers to the object which a function belongs to
+- Scoping rules for `this` in JS are tricky
+- Sometimes we want to force `this` to mean something specific
+- We can do this with `bind`
+- `bind` is a method we can call on functions to create a new function where `this` is bound to a specific value, `someFunction.bind(newThis)`
+- `bind` should be used sparingly and should be used as a last resort
+- Usually there is a better method to deal with a scoping problem
+
+## 2/7/21
+
+### JavaScript Arrays: Review
+
+####

@@ -14,8 +14,8 @@ These are the things I need to do based on the schedule:
 - [x] create a repo for my pre-apprenticeship learning
 - [ ] Learn about markdown...
 - [ ] ...and practice it
-- [ ] Implement ES6 array methods a for loops
-- [ ] Spend time with Jackson Gabbard
+- [x] Implement ES6 array methods a for loops
+- [x] Spend time with Jackson Gabbard
 
 And here are some other things I want to do:
 
