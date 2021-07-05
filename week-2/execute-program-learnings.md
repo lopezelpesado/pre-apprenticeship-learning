@@ -172,3 +172,15 @@
 - `every` returns `true` for an empty array
 - There is no `none` in JS but we can use `!some` instead
 - We could define our own function for `none`
+
+## 5/7/21
+
+### JavaScript Concurrency: setTimeout
+
+- `map` is synchronous, it always processes elements one at a time and in order
+- Asynchronous code doesn't all run at once and in order
+- It schedules code to run in the future
+- Asynchronous means "outside of normal execution order"
+- `setTimeout` is the simplest way to run code asynchronously
+- `setTimeout(someFunction, 1000)` will call `someFunction` 1 second in the future
+- No code runs, the CPU is idle, whilst the `setTimeout` timer is counting down

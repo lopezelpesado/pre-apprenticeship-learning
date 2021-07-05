@@ -25,7 +25,7 @@ I also need to continue to be active on twitter and work on Execute Program's Mo
 - [x] 30/6 https://twitter.com/LopezelPesado/status/1410313700611866630
 - [x] 1/7 https://twitter.com/LopezelPesado/status/1410727084998103041
 - [x] 2/7 https://twitter.com/LopezelPesado/status/1410947624555982867
-- [ ] 5/7
+- [x] 5/7 https://twitter.com/LopezelPesado/status/1412155149129334786
 - [ ] 6/7
 
 ### Execute Program
@@ -33,5 +33,5 @@ I also need to continue to be active on twitter and work on Execute Program's Mo
 - [x] 30/6 JS Arrays: Concat, Includes, Index of, New and fill, Sort, flat and flatMap
 - [x] 1/7 Modern JS: Places where destructuring is allowed, Bind
 - [x] 2/7 JS Arrays: Some and every
-- [ ] 5/7
+- [x] 5/7 JS Concurrency: setTimeout
 - [ ] 6/7
