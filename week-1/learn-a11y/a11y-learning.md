@@ -70,4 +70,19 @@ Test and fix the problems on [this page](https://learn.foundersandcoders.com/wor
 - Document doesn't have a `<title>` element
   - Added `<title>`
 - Images don't have alt text
-  - 
+  - Added alt text to all images
+- Heading elements are not in a sequentially-descending order
+  - changed h3 to h2 and h4 to h3
+- `<html>` element does not have a `[lang]` attribute
+  - added lang attribute
+
+### Manual Tests
+
+- Can't access the menu with keyboard
+  - Changed the menu from a div to button
+- The menu button is skipped with a screen reader
+  - Added aria labels
+- Read more isn't clear about what to read more about
+  - added more descriptive links
+- It is not clear that links are links
+  - removed CSS that removed some link styling

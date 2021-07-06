@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
   <head>
     <title>The Speakeasy</title>
     <style>
@@ -76,22 +76,23 @@
       }
 
       a {
-        outline: 0;
+        /* outline: 0; */
         color: inherit;
-        text-decoration: none;
+        /* text-decoration: none; */
       }
     </style>
   </head>
 
   <body>
     <header>
-      <div id="toggleMenu">
+      <button id="toggleMenu" aria-label="Menu button">
         <svg
           id="openIcon"
           width="32"
           height="32"
           viewBox="0 0 20 20"
           fill="currentColor"
+          aria-label="Open menu"
         >
           <path
             fill-rule="evenodd"
@@ -106,6 +107,7 @@
           height="32"
           viewBox="0 0 20 20"
           fill="currentColor"
+          aria-label="Close menu"
         >
           <path
             fill-rule="evenodd"
@@ -113,7 +115,7 @@
             clip-rule="evenodd"
           />
         </svg>
-      </div>
+      </button>
       <nav id="toggleNav" hidden>
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -126,15 +128,15 @@
         <img width="433" height="108" src="images/title.png" alt="The Speakeasy logo."/>
       </h1>
 
-      <h3>The drinks</h3>
+      <h2>The drinks</h2>
       <ul class="carousel">
         <li class="drink">
-          <h4>Old Fashioned</h4>
+          <h3>Old Fashioned</h3>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2019%2F07%2F5d35db08cfe6f.jpg?table=block&id=1684553e-32ce-4dae-bf74-699aa9d27a4e&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt='An "Old Fashioned", a clear brown or golden coloured liquid in a small with a piece of orange peel in it and a cube of ice.'
           />
           <ul>
             <li>2 oz Bourbon</li>
@@ -148,16 +150,16 @@
           <a
             href="https://www.diffordsguide.com/cocktails/recipe/4782/old-fashioned"
           >
-            Read more
+            Read more about the Old Fashioned
           </a>
         </li>
         <li class="drink">
-          <h4>Suffragette</h4>
+          <h3>Suffragette</h3>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2019%2F09%2F5d7252c394997.jpg?table=block&id=d017c589-65bf-4335-9c2b-58dc53df4fc0&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt='A "Suffragette", a clear liquid in a small, tall glass with a stem with some flowers in the liquid.'
           />
           <ul>
             <li>1.5 oz Gin</li>
@@ -168,16 +170,16 @@
           <a
             href="https://www.diffordsguide.com/cocktails/recipe/4813/suffragette"
           >
-            Read more
+            Read more about the Suffragette
           </a>
         </li>
         <li class="drink">
-          <h4>Emerson</h4>
+          <h3>Emerson</h3>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2016%2F7%2F20%2F201648ff9b36f0c51586ffb9c2cff5f60e8f.jpg?table=block&id=97182a65-d97e-4453-9ec8-aa51b49aec37&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt='An "Emerson", an orange liquid in a small, tall glass with a stem with a cherry on the rim.'
           />
           <ul>
             <li>1.5 oz Gin</li>
@@ -189,16 +191,16 @@
             Shake all ingredients with ice and fine strain into chilled glass.
           </p>
           <a href="https://www.diffordsguide.com/cocktails/recipe/3279/emerson">
-            Read more
+            Read more about the Emerson
           </a>
         </li>
         <li class="drink">
-          <h4>Old Friend</h4>
+          <h3>Old Friend</h3>
           <img
             width="220"
             height="330"
             src="https://www.notion.so/image/https%3A%2F%2Fcdn.diffords.com%2Fcontrib%2Fstock-images%2F2017%2F8%2F04%2F2017ea1688ded26065139cbb2150f78fa37c.jpg?table=block&id=d7b80db4-3426-4dc6-9066-ed28b28a899d&width=600&userId=6828a602-f8be-490a-97b7-ad3cf723003b&cache=v2"
-            alt=""
+            alt='An "Old Friend", an orange liquid in a small and wide, tall glass with a stem with a piece of orange peel on the rim.'
           />
           <ul>
             <li>1.5 oz Gin</li>
@@ -212,7 +214,7 @@
           <a
             href="https://www.diffordsguide.com/cocktails/recipe/4258/old-friend"
           >
-            Read more
+            Read more about the Old Friend
           </a>
         </li>
       </ul>
