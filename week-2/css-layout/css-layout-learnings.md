@@ -48,3 +48,16 @@
 - We could use inheritence from the parent, but this can be confusing
 - Instead of variables, we can define modifier classes which override the max width
 - The classes can be added when we want a different width to the default
+
+## The Stack: controlling vertical space
+
+- The most important primitive is one to control the space between elements
+- For useability and simplicity, best not to appoly spacing rules to individual elements
+- E.g if you put `margin-left` on a button, you can only use that where it makes sense
+- Best to use a parent element to apply spacing to it's children, called "stack"
+- `.class > *` apply styles to all children of the element
+- `.class > *:first-child` apply to the first child of the element
+- `.class > *:not(:first-child)` apply to all children that are not the first
+- `.class > * + *` apply only to elements that have a sibling before them (so not the first)
+
+## The Row: placing elements next to each other

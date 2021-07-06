@@ -18,13 +18,22 @@
         font-family: system-ui, sans-serif;
         padding: 1.5rem;
       }
+      .stack-smol > * + * {
+        margin-top: 0.5rem;
+      }
+      .stack-med > * + * {
+        margin-top: 1rem;
+      }
+      .stack-lrg > * + * {
+        margin-top: 2rem;
+      }
     </style>
   </head>
   <body>
-    <main>
+    <main class="stack-lrg">
       <h1>Welcome to my site</h1>
 
-      <section>
+      <section class="stack-med">
         <h2>The first section</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
@@ -34,20 +43,20 @@
         </p>
       </section>
 
-      <section>
+      <section class="stack-med">
         <h2>Contact me</h2>
-        <form>
-          <div>
+        <form class="stack-med">
+          <div class="stack-smol">
             <label for="name">Name</label>
             <input type="text" id="name" />
           </div>
 
-          <div>
+          <div class="stack-smol">
             <label for="name">Email</label>
             <input type="email" id="email" />
           </div>
 
-          <div>
+          <div class="stack-smol">
             <label for="message">Message</label>
             <textarea id="message"></textarea>
           </div>
