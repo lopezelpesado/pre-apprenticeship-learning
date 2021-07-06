@@ -91,3 +91,13 @@
 - `align-items` allows you to control vertical alignment
 - This can be customised in the same way as before with variables or modifiers
 - `justify-content` controls horizontal alignment
+
+### The Grid: equal-sized children
+
+- Sometimes you need to create a grid of elements, like an image gallery
+- Every element should be the same size and the grid should automatically put as many elements as can fit in a row
+- CSS Grid can do this
+- Creates a 2D layout (columns and rows) and keeps all elements consistently sized
+- We can make a grid and set a specific number of columns
+- `gap` can be used to space the columns out
+- `grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr))` can be used to automatically create columns based on the size of the viewport
