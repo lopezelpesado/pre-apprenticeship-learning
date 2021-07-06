@@ -4,7 +4,7 @@ Here's the [schedule for week 2](https://learn.foundersandcoders.com/course/syll
 
 These are the things I need to do based on the schedule:
 
-- [ ] Complete the [CSS Layouts workshop](https://learn.foundersandcoders.com/workshops/css-layout/)
+- [x] Complete the [CSS Layouts workshop](https://learn.foundersandcoders.com/workshops/css-layout/)
 - [ ] Build a [projects gallery](https://learn.foundersandcoders.com/course/syllabus/pre-apprenticeship-2/project)
 - [x] Work through Grid Garden
 - [ ] Try [recreating a BBC News style homepage](https://github.com/bobbysebolao/learn-css-grid) using CSS Grid
@@ -26,7 +26,7 @@ I also need to continue to be active on twitter and work on Execute Program's Mo
 - [x] 1/7 https://twitter.com/LopezelPesado/status/1410727084998103041
 - [x] 2/7 https://twitter.com/LopezelPesado/status/1410947624555982867
 - [x] 5/7 https://twitter.com/LopezelPesado/status/1412155149129334786
-- [ ] 6/7
+- [x] 6/7 https://twitter.com/LopezelPesado/status/1412449544395239428
 
 ### Execute Program
 
