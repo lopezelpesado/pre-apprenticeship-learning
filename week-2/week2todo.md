@@ -34,4 +34,4 @@ I also need to continue to be active on twitter and work on Execute Program's Mo
 - [x] 1/7 Modern JS: Places where destructuring is allowed, Bind
 - [x] 2/7 JS Arrays: Some and every
 - [x] 5/7 JS Concurrency: setTimeout
-- [ ] 6/7
+- [x] 6/7 JS Concurrency: setTimeout and functions

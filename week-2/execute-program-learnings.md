@@ -184,3 +184,14 @@
 - `setTimeout` is the simplest way to run code asynchronously
 - `setTimeout(someFunction, 1000)` will call `someFunction` 1 second in the future
 - No code runs, the CPU is idle, whilst the `setTimeout` timer is counting down
+
+## 6/7/21
+
+### JavaScript Concurrency: setTimeout and functions
+
+- `setTimeout` works in the same way when wrapped in functions, classes or other constructs
+- It's good to extract asynchronous callbacks into their own functions
+- Putting async code in their own functions makes changing code easier
+- Makes finding bugs easier
+- If there is a problem with the order, we can look at the async block
+- Otherwise, we can look at the rest of the code
