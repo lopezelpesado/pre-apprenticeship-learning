@@ -61,3 +61,33 @@
 - `.class > * + *` apply only to elements that have a sibling before them (so not the first)
 
 ## The Row: placing elements next to each other
+
+- Another useful primitive is row
+- You often need elements placed next to each other
+- Flex box is designed for 1D layouts so perfect for this
+- Setting `display: flex` will control how an elements children are laid out and by default they'll be put in a row
+
+### Making it responsive
+- This layout does not adapt
+- the flex children will shrink as much as they can but they can't go smaller than the largest word inside them, words will get cut off
+- Can't cope with different screen sizes
+- You want things to wrap if there is not enough space
+
+### What about media queries?
+
+- We don't need them here as they are intrinsically responsive
+- Easier than figuring out break points
+
+### Spacing children out
+
+- `gap` can be used to put space between elements
+- Just using `gap` means the gap is maintained even when they wrap
+- Not supported for flex box in Safari but you can approximate it with margins
+
+### Alignment
+
+- flex box gives control over how children are aligned in each direction
+- Most of the time you want things vertically centered
+- `align-items` allows you to control vertical alignment
+- This can be customised in the same way as before with variables or modifiers
+- `justify-content` controls horizontal alignment

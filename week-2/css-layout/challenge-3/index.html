@@ -30,13 +30,22 @@
         background-color: black;
         color: white;
       }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;      
+      }
+      .justify-space-between {
+        justify-content: space-between;
+      }
     </style>
   </head>
   <body>
-    <header>
+    <header class="row justify-space-between">
       <a href="/" aria-label="Home">🐹</a>
       <nav>
-        <ul>
+        <ul class="row">
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#blog">Blog</a></li>
