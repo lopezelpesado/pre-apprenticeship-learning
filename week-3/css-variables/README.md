@@ -1,5 +1,7 @@
 # Learn CSS Variables
 
+*All the files in this directory (`/css-variables`) are copied from [bobbysebolao's excellent repo](https://github.com/bobbysebolao/learn-css-variables)*
+
 A short intro to using CSS variables to control colour.
 
 ![a GIF screengrab showing night mode being toggled on and off on a webpage](https://i.gyazo.com/85b3feda950cbb649bdbf79adff5a7f6.gif)
