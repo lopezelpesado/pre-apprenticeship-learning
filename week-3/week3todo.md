@@ -1,0 +1,27 @@
+# Week 3 (7/7/21 - 13/7/21)
+
+Here's the [schedule for week 3](https://learn.foundersandcoders.com/course/syllabus/pre-app-3/schedule/).
+
+These are the things I need to do based on the schedule:
+
+- [ ] 
+
+And here are some other things I want to do:
+
+I also need to get active on twitter and work on Execute Program every (working day) so this next section will keep track of that:
+
+### Twitter TIL or retweet
+
+- [x] 7/7 https://twitter.com/LopezelPesado/status/1412908492273459201
+- [ ] 8/7
+- [ ] 9/7
+- [ ] 12/7
+- [ ] 13/7
+
+### Execute Program
+
+- [x] 7/7 JS Concurrency: Concurrent setTimeouts, clearTimeout, Sequential setTimeouts
+- [ ] 8/7
+- [ ] 9/7
+- [ ] 12/7
+- [ ] 13/7
