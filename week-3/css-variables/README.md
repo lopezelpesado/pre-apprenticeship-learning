@@ -1,6 +1,6 @@
-# Learn CSS Variables
+*All the files in this directory (`/css-variables`) are copied from [bobbysebolao's excellent repo](https://github.com/bobbysebolao/learn-css-variables).*
 
-*All the files in this directory (`/css-variables`) are copied from [bobbysebolao's excellent repo](https://github.com/bobbysebolao/learn-css-variables)*
+# Learn CSS Variables
 
 A short intro to using CSS variables to control colour.
 
