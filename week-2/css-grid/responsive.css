@@ -1,0 +1,16 @@
+/* STRETCH GOAL */
+/* 4-col and 3-col layouts for different screen sizes. */
+
+/* write your style declarations here */
+
+@media only screen and (max-width: 1024px) {
+    .posts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+  
+@media only screen and (max-width: 768px) {
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

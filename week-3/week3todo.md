@@ -5,6 +5,7 @@ Here's the [schedule for week 3](https://learn.foundersandcoders.com/course/syll
 These are the things I need to do based on the schedule:
 
 - [ ] 
+- [ ] Research [Apolitical](https://apolitical.co/home)
 
 And here are some other things I want to do:
 

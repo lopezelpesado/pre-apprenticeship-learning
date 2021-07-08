@@ -1,6 +1,6 @@
 # Week 1 (16/6/21 - 29/6/21)
 
-Here's the [schedule for week 1](https://learn.foundersandcoders.com/course/syllabus/pre-apprenticeship-1/schedule/).
+Here's the [schedule for week 1](https://learn.foundersandcoders.com/course/syllabus/pre-app-1/schedule/).
 
 These are the things I need to do based on the schedule:
 
@@ -8,12 +8,12 @@ These are the things I need to do based on the schedule:
 - [x] Learn about the terminal
 - [x] Learn about semantic HTML
 - [x] Learn about accessibility and building sites for everyone
-- [ ] Sign up for JavaScript 30 and...
-- [ ] ...complete the JavaScript Drum Kit project and...
-- [ ] ...complete the CSS + JS Clock project
+- [x] Sign up for JavaScript 30 and...
+- [x] ...complete the JavaScript Drum Kit project and...
+- [x] ...complete the CSS + JS Clock project
 - [x] create a repo for my pre-apprenticeship learning
-- [ ] Learn about markdown...
-- [ ] ...and practice it
+- [x] Learn about markdown...
+- [x] ...and practice it
 - [x] Implement ES6 array methods a for loops
 - [x] Spend time with Jackson Gabbard
 
