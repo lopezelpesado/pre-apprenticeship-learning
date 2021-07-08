@@ -32,3 +32,26 @@
 
 - You can set timers inside other timers
 - JS never runs 2 pieces of code at the same time
+
+## 8/7/21
+
+### JavaScript Concurrency: Review
+
+#### clearTimeout
+
+- `clearTimeout` can be used to cancel a timer
+
+#### Concurrent setTimeouts
+
+- You can chain timers with nested `setTimeouts`
+
+### JavaScript Concurrency: Promise then
+
+- Nested timers are hard to read
+- It would be great to have a function that waited for the last timer to run instead as it would be easier to read
+- JS's promises get close to this
+- Promises look like this `Promise.`
+- You can have `Promise.resolve(n)` which creates an object with a value of `n`
+- You can chain `.then()` after promises to do different things with the `n`
+- You can chain a `.then(n => console.log(n))` to then display `n`
+- Browsers display promises as `Promise {<fulfilled>: 5}`

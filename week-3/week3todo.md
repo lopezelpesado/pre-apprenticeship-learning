@@ -9,12 +9,12 @@ These are the things I need to do based on the schedule:
 
 And here are some other things I want to do:
 
-I also need to get active on twitter and work on Execute Program every (working day) so this next section will keep track of that:
+I also need to get active on twitter, work on Execute Program and Khan Academy Computer Science course every (working day) so this next section will keep track of that:
 
 ### Twitter TIL or retweet
 
 - [x] 7/7 https://twitter.com/LopezelPesado/status/1412908492273459201
-- [ ] 8/7
+- [x] 8/7 https://twitter.com/LopezelPesado/status/1413235958154137605
 - [ ] 9/7
 - [ ] 12/7
 - [ ] 13/7
@@ -22,7 +22,13 @@ I also need to get active on twitter and work on Execute Program every (working 
 ### Execute Program
 
 - [x] 7/7 JS Concurrency: Concurrent setTimeouts, clearTimeout, Sequential setTimeouts
-- [ ] 8/7
+- [x] 8/7 JS Concurrency: Promise then
+- [ ] 9/7
+- [ ] 12/7
+- [ ] 13/7
+
+### Khan Academy
+
 - [ ] 9/7
 - [ ] 12/7
 - [ ] 13/7
