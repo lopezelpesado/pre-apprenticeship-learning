@@ -55,3 +55,15 @@
 - You can chain `.then()` after promises to do different things with the `n`
 - You can chain a `.then(n => console.log(n))` to then display `n`
 - Browsers display promises as `Promise {<fulfilled>: 5}`
+- "fulfilled" means the promise contains a value
+
+## 9/7/21
+
+### JavaScript Concurrency: setInterval and clearInterval
+
+- `setInterval` will call a function repeatedly at a given interval until we tell it to stop
+- `clearInterval` will stop the given interval
+- `clearInterval` does nothing if called on an expired interval or a non interval
+- If you set then immediately clear an interval, the code won't run
+- If you don't set a delay, it will default to 0 and run as many times as it can
+- Doing this will hurt performance

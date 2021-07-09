@@ -15,7 +15,7 @@ I also need to get active on twitter, work on Execute Program and Khan Academy C
 
 - [x] 7/7 https://twitter.com/LopezelPesado/status/1412908492273459201
 - [x] 8/7 https://twitter.com/LopezelPesado/status/1413235958154137605
-- [ ] 9/7
+- [x] 9/7 https://twitter.com/blindandb0ujee/status/1413466069264523264
 - [ ] 12/7
 - [ ] 13/7
 
@@ -23,12 +23,12 @@ I also need to get active on twitter, work on Execute Program and Khan Academy C
 
 - [x] 7/7 JS Concurrency: Concurrent setTimeouts, clearTimeout, Sequential setTimeouts
 - [x] 8/7 JS Concurrency: Promise then
-- [ ] 9/7
+- [x] 9/7 JS Concurrency: setInterval and clearInterval
 - [ ] 12/7
 - [ ] 13/7
 
 ### Khan Academy
 
-- [ ] 9/7
+- [x] 9/7 Get ready for Algebra 1: Course Challenge (70%)
 - [ ] 12/7
 - [ ] 13/7
