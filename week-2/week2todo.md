@@ -9,11 +9,11 @@ These are the things I need to do based on the schedule:
 - [x] Work through Grid Garden
 - [x] Try [recreating a BBC News style homepage](https://github.com/bobbysebolao/learn-css-grid) using CSS Grid
 - [ ] Look into [ARIA Labels](https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/) and [why they're used](https://www.24a11y.com/2019/what-a-year-of-learning-and-teaching-accessibility-taught-me/). Use them in your project when needed
-- [ ] Work thorugh "Playing with CSS Variables" and "JS && Array Cardio 1" on JS30
+- [x] Work thorugh "Playing with CSS Variables" and "JS && Array Cardio 1" on JS30
 
   Employment
 
-- [ ] Prepare another coding challenge for anything
+- [x] Prepare another coding challenge for anything
 
 And here are some other things I want to do:
 
