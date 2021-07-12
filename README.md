@@ -11,8 +11,8 @@ I'll create a lil' site to click through to each week. Each week can be a separa
 - [x] Make a week 1 folder
 - [ ] Make a site for week 1
 - [x] Make a todo for week 1
-- [ ] Week 1 homework
+- [x] Week 1 homework
 - [x] Make a week 2 folder
 - [ ] Make a site for week 2
-- [ ] Make a todo for week 2
-- [ ] Week 2 homework
+- [x] Make a todo for week 2
+- [x] Week 2 homework
