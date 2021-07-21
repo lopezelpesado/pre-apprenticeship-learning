@@ -4,9 +4,12 @@
 3. Remove the class of "highlight" if already present
 e.g. "<p class="para">Hello</p>" -> "<p class="para highlight">Hello</p>"
 */
+
+const p2 = document.getElementById("js-p2");
+
 function toggleHighlight() {
-  // your code here
-}
+  p2.classList.toggle("highlight");
+};
 
 /* CHALLENGE 2
 1. Take an array of strings as a parameter
@@ -17,8 +20,18 @@ e.g. generateList(["hello", "world"]) -> <ul>
                                           </ul>
 */
 function generateList(array) {
-  // your code here
-}
+  let newList = document.createElement("ul");
+
+  array.forEach(e => {
+    let newListItem = document.createElement("li");
+
+    newListItem.textContent = e;
+
+    newList.appendChild(newListItem);
+  });
+
+  return newList;
+};
 
 /* CHALLENGE 3a
 1. Take a `textarea` element as a parameter
@@ -26,15 +39,21 @@ function generateList(array) {
 3. If it contains > 140 characters set the `aria-invalid="true"` attribute
 */
 function validateTweet(textarea) {
-  // your code here
-}
+  if (textarea.value.length > 140) {
+    textarea.setAttribute("aria-invalid", "true");
+  } else {
+    textarea.setAttribute("aria-invalid", "false");
+  };
+};
 
 /* CHALLENGE 3b
 1. Find the textarea with ID "tweet"
 2. Whenever a user types into it validate it using the previous function
 */
 function validateTweetOnInput() {
-  // your code here
+  const tweet = document.getElementById("tweet");
+
+  tweet.addEventListener("input", () => { validateTweet(tweet) });
 }
 
 /* CHALLENGE 4
@@ -44,5 +63,14 @@ e.g. <button class="toggle-button">Toggle</button>
      <p>This should appear/disappear when the button is clicked</p>
 */
 function setupToggleButtons() {
-  // your code here
+  let togglers = Array.from(document.getElementsByClassName("toggle-button"));
+
+  togglers.forEach(e => e.addEventListener("click", () => {
+    let sibling = e.nextElementSibling;
+    if (sibling.style.display === "none") {
+      sibling.style.display = "block";
+    } else {
+      sibling.style.display = "none"
+    };
+  }))
 }
