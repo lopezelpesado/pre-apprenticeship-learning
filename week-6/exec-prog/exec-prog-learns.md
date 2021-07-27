@@ -103,3 +103,38 @@
 - `Number.isSafeInteger` checks both upper and lower bounds
 - passing a non number will return false
 - previously `Math.pow` was used for exponentiation but now you can use the `**` operator
+
+### Modern JavaScript: Sets
+
+- `includes` method is O(n), if there are n elelments then `includes` has to do n comparisons which with a large array could cause performance problems
+- `Set` data type is better for this
+- it's an ordered collection with only unique elements
+- sets are collections, they contain a bunch of JS values
+- we can give a set an initial set of values in its constructor
+- we can `add()` more values later
+- we can check if a set `has()` a given value
+- sets are ordered
+- if we look at the elements in a set, they'll come back in the order they were inserted
+- to get elements from a set we use `values` method
+- it returns an iterator which can be converted into an array with `Array.from()`
+- sets are maths objects that have been studied
+- in JS, unlike other languages, sets are ordered
+- sets only contain unique values, if you `add` a value that already exists, nothing happens
+- `delete` deletes an element and `clear` clears the whole set
+- sets have a `size` property that returns the number of items in a set
+- dupes don't add to size
+- sets power is that `has` is very fast
+- `includes` slows down as an array gets larger but sets don't have that problem
+- sets `has()` is O(1), always takes the same amount of time regardless of how many elements there are
+
+### Modern JavaScript: Spread
+
+- `...` can be used to provide a variable number of args to a function
+- can also be used when constructing an array to include an arrays elements into a new array
+- in this way it's called the spread operator
+- you can spread multiple arrays with one expression and the order of the spreads matters
+- merging arrays was done with `concat`
+- spreading is a more readable alt
+- spreading works with objects, instead of elements it uses properties
+- order matters when setting object keys, the last value assigned to a key wins
+- same with spreads
