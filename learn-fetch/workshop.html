@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Learn Fetch & Promises</title>
+	</head>
+	<body>
+		<h1>Open the console</h1>
+		<script>
+			// let pika = fetch();
+			// console.log(pika);
+			// pika.then((result) => console.log(result));
+			// pika
+			// 	.then((response) => response.json())
+			// 	.then((data) => console.log(data))
+			// 	.catch((error) => console.log(error));
+
+			// Task 1
+
+			function getUser(userName) {
+				let user = fetch(`https://api.github.com/users/${userName}`);
+				return user.then((response) => response.json());
+			}
+
+			// Task 2
+
+			function getRepos(user) {
+				let repos = fetch(user.repos_url);
+				return repos.then((response) => response.json());
+			}
+
+			// Task 3
+
+			let user1 = getUser("lopezelpesado");
+			let user2 = getUser("Albadylic");
+			let user3 = getUser("sofer");
+			let user4 = getUser("yvonne-liu");
+
+			Promise.all([user1, user2, user3, user4]).then((users) =>
+				console.log(users)
+			);
+
+			// took approx. 1hr
+		</script>
+	</body>
+</html>
