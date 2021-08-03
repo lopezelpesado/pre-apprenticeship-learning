@@ -74,3 +74,23 @@
 - sometimes we want to find every element in one set that isn't in another set
 - same as intersection but reverse the logic of the filter
 - set operations are a lot faster than there array equivalents, set ops are O(n) whereas arrays are O(n^2)
+
+## 3/8/21
+
+### Modern JavaScript: Anonymous and inline classes
+
+- funcs have a name prop
+- classes do as well
+- class defs can be assigned to variables
+- you can also have anon classes which have the name `''`
+- when you immediately assign an anon class to a variable, the variable name will become the class name like with funcs
+- anon classes work with inheritance
+- JS classes are funcs
+- this isn't used often
+
+### Modern JavaScript: Accessor properties on classes
+
+- getters can be used in classes
+- similarly, when we access the prop, the getter function is called
+- setters also work in classes
+- getters and setters are inherited
