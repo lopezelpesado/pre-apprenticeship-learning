@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Real world fetch</title>
+	</head>
+	<body>
+		<form id="js-form">
+			<label for="player1">Player 1</label>
+			<input type="text" id="player1" name="player1" />
+
+			<label for="player2">Player 2</label>
+			<input type="text" id="player2" name="player2" />
+
+			<button type="submit">Submit</button>
+		</form>
+		<script>
+			const form = document.querySelector("#js-form");
+			// const player1 = document.querySelector("#player1");
+			// const player2 = document.querySelector("#player2");
+
+			form.addEventListener("submit", (e) => {
+				e.preventDefault();
+
+				let data = Object.fromEntries(new FormData(form));
+
+				console.log(data);
+
+				fetch("https://echo.oliverjam.workers.dev/json", {
+					method: "POST",
+					headers: {
+						"content-type": "application/json",
+					},
+					body: JSON.stringify(data),
+				})
+					.then((response) => {
+						if (response.ok) {
+							return response.json();
+						} else {
+							throw new Error(response.status);
+						}
+					})
+					.then((json) => console.log(json))
+					.catch((error) => console.error(error));
+			});
+			// fetch("https://echo.oliverjam.workers.dev/json", {
+			// 	method: "POST",
+			// 	headers: {
+			// 		"content-type": "application/json",
+			// 	},
+			// 	body: JSON.stringify({
+			// 		player1: "Alex",
+			// 		player2: "Adriana",
+			// 	}),
+			// })
+			// 	.then((response) => {
+			// 		if (response.ok) {
+			// 			return response.json();
+			// 		} else {
+			// 			throw new Error(response.status);
+			// 		}
+			// 	})
+			// 	.then((json) => console.log(json))
+			// 	.catch((error) => console.error(error));
+		</script>
+	</body>
+</html>
