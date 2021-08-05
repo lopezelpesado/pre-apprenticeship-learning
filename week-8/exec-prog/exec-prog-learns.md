@@ -27,3 +27,46 @@
 - accessors can also be static
 - accessing a static accessor on an instance will return `undefined` just like accessing any property on an object that isn't there
 - inside a static method or accessor, `this` refers to the class itself
+
+## 5/8/21
+
+### Modern JavaScript: Computed methods and accessors
+
+- computed props are where obj keys are determined dynamically
+- this exists for classes too
+- computed method names are computed once when the class is defined, if we change the value the computed method was defined with it won't affect it as it's already defined
+- classes defined in functions can use the functions arguments to compute accessors and methods
+- this is not used very often
+- remember, once they are defined, that's it, they don't change
+
+### Modern JavaScript: Symbol basics
+
+- obj keys are usually strings
+- can be accessed with `obj.name` or `obj.['name']`
+- most JS data types can't be used as obj keys
+- `true` as a key will be converted to `'true'`
+- if an obj has `'true'` as a key and then try creating a `true` key, `'true'` will get overwritten
+- Modern JS has fixed this by adding symbols
+- symbols are a new data type that can be used in obj keys
+- you can define a symbol by giving it a description `Symbol('name')`
+- the description should say what the symbol is used for
+- `.description` will return the name in `Symbol('name')`
+- symbol equality works like array equality, a symbol is always equal to itself
+- 2 arrays are never equal to each other even when they have the same elements
+- similarly with symbols, 2 symbols are never equal to each other, even with the same description
+- symbols can be used as obj keys
+- we have to use compute syntax to use the symbol
+- can only be accessed with `obj[key]` syntax
+- symbols are not just a special kind of string
+- `'name'` and `Symbol('name')` can both be keys with different values
+- symbols exist to allow us to add props to objs without affecting the regular props
+
+### Modern JavaScript: Builtin Symbols
+
+- JS already has some symbols
+- they are used for metaprogramming or changing the behaviour of a program using code
+- using the built in symbols we can change how JS runs our code
+- `.toString()` on an object results in `'[object Object]'`
+- if the obj has a prop called `Symbol.toStringTag` then `.toString()` will return the value instead of `Object` in `'[object Object]'`
+- `Symbol.toStringTag` can be assigned to an existing obj or can be assigned when the obj is defined
+- have to use a computed prop for when the obj is defined
