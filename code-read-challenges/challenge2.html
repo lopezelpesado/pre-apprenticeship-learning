@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<body>
+	<form id="a">
+		<label for="b">Number</label>
+		<input type="number" id="b" name="b" />
+
+		<button type="submit">Submit</button>
+	</form>
+
+	<script>
+		const a = document.querySelector("#a");
+		const b = document.querySelector("#b");
+		let c;
+
+		a.addEventListener("submit", (e) => {
+			e.preventDefault();
+			f(b.value);
+		});
+
+		function f(n) {
+			c = {
+				1: n,
+				2: n + 3,
+				3: 7,
+			};
+		}
+	</script>
+</body>
+
+<!-- What does this do? -->
+
+<!-- Enter a number and press submit, what would entering console.log(c[1], c[2], c[3]) in the browser console return? -->
+
+<!-- What would be better names for a, b and c? -->
