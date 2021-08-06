@@ -70,3 +70,41 @@
 - if the obj has a prop called `Symbol.toStringTag` then `.toString()` will return the value instead of `Object` in `'[object Object]'`
 - `Symbol.toStringTag` can be assigned to an existing obj or can be assigned when the obj is defined
 - have to use a computed prop for when the obj is defined
+
+## 6/8/21
+
+### Modern JavaScript: Defining iterators
+
+- strings, arrays and other data types are iterables
+- can be iterated over by loops and the like
+- there are rules for how iteration works
+- the iterable exposes a method
+- the iterator calls those methods
+- on an array there is a `Symbol.iterator` method
+- the iterator object has a `next` method, calling it gives us one of the elements in the array
+- the element is wrapped in an object that has a `done` flag that tells us if there is more data left
+- each `next` call returns the next value from the array
+- once all items have been iterated over, the next `next` will change the done flag to `true` and the value will be `undefined`
+- the iteration is finished
+- you can define your own iterable object and our own iterator
+- we need a `next()` method that returns an obj with keys value and done
+- you can use a class or object
+- the process of iterating is governed by the 2 iteration protocols
+- 1 is the iterable protocol, an obj has a `Symbol.iterator` method, arrays, strings and custom objs follow this
+- 2 is the iterator protocol, an obj has a `next` method which returns an obj `{value, done}`
+
+### Modern JavaScript: Problems with object keys
+
+- obj keys must be strings, nums or symbols
+- any other value is converted to a string
+- if we use an obj as a key, it gets converted to `'[object Object]'`
+- the solution to this is the map data type
+
+### Modern JavaScript: Symbols are metadata
+
+- symbols are metadata, they are not a normal part of an object
+- when we serialize an object with `JSON.stringify`, symbol props are ignored
+- round tripping an obj with symobol props will lose them
+- this is useful as it means `Symbol.toStringTag` won't show up in JSON
+- you can store sensitive data in symbol props as they will be lost when JSONing them for API use
+- well behaved data serialization tools will ignore symbol props
