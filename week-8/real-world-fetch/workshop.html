@@ -6,7 +6,18 @@
 		<title>Real world fetch</title>
 	</head>
 	<body>
-		<form id="js-form">
+		<h1>Pokemon Search</h1>
+
+		<form id="form">
+			<label for="pokeName">Pokemon name</label>
+			<input type="text" id="pokeName" name="pokeName" required />
+			<button type="submit" id="submit">Search</button>
+		</form>
+
+		<p id="resultName"></p>
+		<img id="resultSprite" src="" alt="" />
+
+		<!-- <form id="js-form">
 			<label for="player1">Player 1</label>
 			<input type="text" id="player1" name="player1" />
 
@@ -14,26 +25,25 @@
 			<input type="text" id="player2" name="player2" />
 
 			<button type="submit">Submit</button>
-		</form>
+		</form> -->
 		<script>
-			const form = document.querySelector("#js-form");
-			// const player1 = document.querySelector("#player1");
-			// const player2 = document.querySelector("#player2");
+			const form = document.querySelector("#form");
+			const pokeName = document.querySelector("#pokeName");
+			const resultName = document.querySelector("#resultName");
+			const resultSprite = document.querySelector("#resultSprite");
 
 			form.addEventListener("submit", (e) => {
 				e.preventDefault();
 
-				let data = Object.fromEntries(new FormData(form));
+				resultName.textContent = "What? Your search is happening!";
+				resultSprite.setAttribute("src", "");
+				resultSprite.setAttribute("alt", "");
 
-				console.log(data);
+				let searchName = pokeName.value;
 
-				fetch("https://echo.oliverjam.workers.dev/json", {
-					method: "POST",
-					headers: {
-						"content-type": "application/json",
-					},
-					body: JSON.stringify(data),
-				})
+				let properName;
+
+				fetch(`https://pokeapi.co/api/v2/pokemon/${searchName}`)
 					.then((response) => {
 						if (response.ok) {
 							return response.json();
@@ -41,9 +51,57 @@
 							throw new Error(response.status);
 						}
 					})
-					.then((json) => console.log(json))
-					.catch((error) => console.error(error));
+					.then((json) => {
+						fetch(`https://pokeapi.co/api/v2/pokemon-species/${searchName}`)
+							.then((response) => response.json())
+							.then((species) => {
+								resultName.textContent = species.names[8].name;
+								resultSprite.setAttribute(
+									"alt",
+									`${resultName.textContent}'s in game sprite`
+								);
+							});
+						return json;
+					})
+					.then((json) => {
+						resultSprite.setAttribute("src", json.sprites.front_default);
+					})
+					.catch((error) => {
+						if ((error.Error = 404)) {
+							resultName.textContent =
+								"You used search! But nothing happened! (Couldn't find a pokemon with that name.)";
+						} else {
+							resultName.textContent =
+								"OAK: This isn't the time to use that! (Something went wrong.)";
+						}
+					});
 			});
+			// const form = document.querySelector("#js-form");
+			// // const player1 = document.querySelector("#player1");
+			// // const player2 = document.querySelector("#player2");
+
+			// form.addEventListener("submit", (e) => {
+			// 	e.preventDefault();
+
+			// 	let data = Object.fromEntries(new FormData(form));
+
+			// 	fetch("https://echo.oliverjam.workers.dev/json", {
+			// 		method: "POST",
+			// 		headers: {
+			// 			"content-type": "application/json",
+			// 		},
+			// 		body: JSON.stringify(data),
+			// 	})
+			// 		.then((response) => {
+			// 			if (response.ok) {
+			// 				return response.json();
+			// 			} else {
+			// 				throw new Error(response.status);
+			// 			}
+			// 		})
+			// 		.then((json) => console.log(json))
+			// 		.catch((error) => console.error(error));
+			// });
 			// fetch("https://echo.oliverjam.workers.dev/json", {
 			// 	method: "POST",
 			// 	headers: {
