@@ -108,3 +108,54 @@
 - this is useful as it means `Symbol.toStringTag` won't show up in JSON
 - you can store sensitive data in symbol props as they will be lost when JSONing them for API use
 - well behaved data serialization tools will ignore symbol props
+
+## 8/8/21
+
+### Modern JavaScript: Iterators
+
+- generators and iterators work with for-of loops
+- a generator is a way to define an iterable
+- a generator does all usual iterator stuff
+- calling a generator gives us an iterable
+- calling the iterable's `Symbol.iterator` methods gives an iterator
+- calling the iterator's `next` method gives us a `{value, done}` obj
+- generators are more common than manual iterators
+- knowing iteration protocols will make identifying bugs easier
+- iterators (and generators) can be used for more than for-of loops
+- e.g. array destructuring syntax works with iterables
+- iterators always go forward, once a value has been iterated you can't go back to it
+- this is central to iterators' purpose
+- iterators can iterate over data even when not all the data is present
+- iterators can have infinite length
+- generators with an infinite loop can be used because they'll only loop as many times as needed
+- when destructuring and iterator, its `next()` will be called just enough times to get the destructured data
+- iterators are lazy, they only produce data when it's needed
+- using a for-of loop or destructuring wrong will cause an error
+- if you call `Array.from()` on a non iterator, you'll get `[]`, not good as this can hide bugs
+
+### Modern JavaScript: Maps
+
+- objs can only have strings and symbols as keys
+- `Map` data type does not have that limitation
+- `Map`s are similar to objs but the keys can be anything
+- `.set()` is used to assign a value to a key
+- `.get()` is used to retrieve the value at that key
+- `someMap[someKey]` does not work with `Map`s, you'll get a result but it won't be what you want and usually `undefined`
+- initialise a map with an array of 2 element arrays corresponding to a key value pair
+- objs can only have 1 value at a given key, if we set a key twice only the last value is remembered
+- `Map`s work the same way
+- `set`ting a key twice overwrites the first value with the 2nd
+- `delete()` deletes a key, `clear()` empties the entire map and `has()` tells us if a key exists
+- `get()`ing a key that doesn't exist returns `undefined`
+- the `.size` prop returns the number of items in the map
+- setting the same key twice does not change the size
+- `Map`s can be used to make graphs where nodes are connected by edges and can be stored in the map (like cities and their connections)
+
+### Modern JavaScript: Map iterators
+
+- `Map`s have `keys()` and `values()` methods
+- keys and values will be returned in the insertion order
+- `Map`s can be turned into arrays with `Array.from()` and the keys and values will come out how the constructor takes them, an array of 2 element array representing key value pairs
+- you can destructure maps directly which comes out as an array of 2 elements representing a key value pair
+- you can use an iterable as a constructor argument for a map
+- `Map`s are iterables, we can copy a map by passing in the old one
