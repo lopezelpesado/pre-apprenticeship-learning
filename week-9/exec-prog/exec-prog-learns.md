@@ -43,3 +43,29 @@
 - fulfilled promises contain values
 - Promises have no way to directly read their values
 - only way to see the value inside a promise is with another `then`
+
+## 23/8/21
+
+### JavaScript Concurrency: Promises are asynchronous
+
+- `then` callback are async
+- promises run even if nothing waits for them
+- creating a promise schedules its callback to run
+- `then`s execute in a similar order to timeouts
+- promises schedule code to run later and we can add callbacks to them to run when the promise fulfills
+- normally you don't want promise callbacks to reach outside their scope
+
+### JavaScript Concurrency: Omitting promise values
+
+- functions with `{}` that don't have a `return` statement will always return `undefined`
+- similarly, if we omit `Promise.resolve`'s argument, the promise will contain `undefined`
+- `Promise.resolve();` => `{fulfilled: undefined}`
+- A `then` with no `return` will return the same thing
+
+### JavaScript Concurrency: clearTimeout
+
+- `clearTimeout` cancels timeouts set with `setTimeout`
+- `setTimeout` returns a number (in browsers) or object (in NodeJS) which is the ID of the timer
+- passing the return value of a `setTimeout` to `clearTimeout` will cancel that timer
+- clearing a timer that has already fired does nothing
+- clearing a something that is not a timer does nothing
