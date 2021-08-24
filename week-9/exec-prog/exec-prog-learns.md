@@ -69,3 +69,34 @@
 - passing the return value of a `setTimeout` to `clearTimeout` will cancel that timer
 - clearing a timer that has already fired does nothing
 - clearing a something that is not a timer does nothing
+
+## 24/8/21
+
+### JavaScript Concurrency: What's inside a promise?
+
+- promises are implemented by the browser
+- browser promise internals are not visible to JS
+- can be confusing if you serialize a promise into a JSON, native promises will return `{}`
+- `Object.assign` (merges one object's props into another) can result in a similar bug
+- round tripping an `Error` will result in something similar
+
+### JavaScript Concurrency: setInterval and clearInterval
+
+- `setInterval` calls a function repeatedly until will tell it to stop with a set period between each call
+- `clearInterval` clears the interval, like `clearTimeout`
+- clearing a finished interval or non-interval does nothing
+- providing no interval will default to `0`, which means it will run it as many times as it can
+- this mistake can hurt performance
+
+### JavaScript Concurrency: Rejecting promises
+
+- promises have error handling called rejection
+- create with `Promise.reject(someReason)`
+- the reason arg tells us why the promise rejected
+- usually an `Error` object but can be other JS values
+- JS has no way to represent literal error objs
+- `.toString()` on an `Error` obj will result in `'Error: text'`
+- `throw`ing an exception in a `then` converts the exception into a promise rejection, the thrown error becomes the reason
+- `then`s chained on a rejected promise will reject with the same reason, the callbacks are never called
+- similar to how exceptions work in regular JS, when an exception is thrown, the following lines don't execute
+-
