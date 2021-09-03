@@ -1,16 +1,23 @@
-// function map(array) {
-//   return array;
-// }
+function map(array, fn) {
+	const result = [];
+	for (e of array) {
+		result.push(fn(e));
+	}
+	return result;
+}
 
 function filter(arr, fn) {
-	if (!Array.isArray(arr)) {
-		return "please pass an array";
+	// if (arr.every((e) => fn(e))) {
+	// 	return arr;
+	// } else if (!arr.some((e) => fn(e))) {
+	// 	return [];
+	// } else {
+	const result = [];
+	for (e of arr) {
+		if (fn(e)) {
+			result.push(e);
+		}
 	}
-
-	if (typeof fn !== "function") {
-		return "please pass a function";
-	}
-
-	const result = [...arr];
 	return result;
+	// }
 }
