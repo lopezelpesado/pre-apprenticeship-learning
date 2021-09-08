@@ -39,3 +39,42 @@
 - Node is different
 - Node timers are objects
 - timers have no "user serviceable parts" and we shouldn't use them other than passing them to the clear methods
+
+## 8/9/21
+
+### JavaScript Concurrency: Promises resolving to promises
+
+- `Promise.resolve` can create fulfilled promises
+- promises can be resolved with other promises
+- this doesn't put a promise in a promise but instead flattens the promises
+- `const promise2 = Promise.resolve(promise1);`
+- when promise1 fulfills, promise2 also fulfills with the same value
+- if promise1 rejects, promise2 rejects with the same reason
+- `Promise.resolve` can create rejected promises
+- promises can be resolved with `Promise.resolve`, the `new Promise` constructor or `then`
+- `then`s can have chains of `then`s within them, as long as the callback returns a promise, it'll be flattened
+
+### JavaScript Concurrency: Promise constructor is synchronous
+
+- callbacks passed to `new Promise(...)` are called immediately
+- promise `then`s are called async
+
+### JavaScript Concurrency: Promise cleanup with finally
+
+- can use `finally` to run some code regardless of whether or not an exception occurs
+- promises have `finally` too as a method on the promise object
+- the `finally` method returns a new promise
+- unlike `then` and `catch`, `finally` returns a promise that fulfills or rejects with whatever the parent's value was
+- `finally`'s callback value is ignored
+- `finally` doesn't let us change the value of a promise, just lets us run some code regardless of whether the promise fulfills or rejects
+
+### JavaScript Concurrency: Recovering from rejection
+
+- `catch` callbacks get the rejection reason as an argument
+- they can also return values which'll become fulfilled promises
+- after `try { ... } catch { ... }`, code will run as the exception was handled
+- promise `catch` works in the same way
+- `then`s after a `catch` don't need to know that a rejection happened
+- any value returned by the `catch` is passed to the next `then`
+- handle the most specific errors that you expect, re-throw any other errors
+-
