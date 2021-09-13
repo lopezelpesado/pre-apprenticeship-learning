@@ -77,4 +77,33 @@
 - `then`s after a `catch` don't need to know that a rejection happened
 - any value returned by the `catch` is passed to the next `then`
 - handle the most specific errors that you expect, re-throw any other errors
+
+## 13/9/21
+
+### JavaScript Concurrency: Saving the resolve function for later
+
+- you can declare a variable and assign a value to it later
+- you can write to a global variable from inside a function
+- you can do the same thing with the promise constructor's resolve argument
+- the resolve function can be assigned to a variable
+- when called, the promise will be fulfilled
+- we can use this to delay running the resolve function
+- promises can be split into 2 parts
+- the resolve function can go to one place and the promise itself to another place
+- reading the promise with thens will have to wait until the resolve part has been executed
+- a promise can only be resolved once, further attempts are ignored
+
+### JavaScript Concurrency: Running promises concurrently
+
+- you can run an API call and then another API call after it but this is not performant
+- you could call both of the of the API calls immediately which is better
+- you could have a function that waits for all the promises and then collects the results and returns that
+- JS already has a function that does this though, `Promise.all`
+
+### JavaScript Concurrency: Control flow with promises
+
+- promises are truthy, using them in a boolean like `if` or `!` will always behave like `true`
+- there is no way to synchronously look in a promise
+- using them in `if`s doesn't make sense
+- conditionals have to go in `then` callbacks
 -
