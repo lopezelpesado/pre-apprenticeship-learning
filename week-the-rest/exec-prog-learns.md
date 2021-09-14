@@ -106,4 +106,23 @@
 - there is no way to synchronously look in a promise
 - using them in `if`s doesn't make sense
 - conditionals have to go in `then` callbacks
--
+
+## 14/9/21
+
+### JavaScript Concurrency: Promise.all
+
+- `Promise.all` takes an array of promises and returns a fulfilled promise with an array of all the promises values
+- it runs all the promises at the same time
+- if 1 of the promises rejects, it rejects with the rejection reason
+- if there are multiple rejections, the first in time wins (not in array order)
+- the whole thing rejects as soon as any of them reject
+
+### JavaScript Concurrency: Promise states
+
+- promises can be fulfilled or rejected
+- promises can take time to fulfill
+- whilst a promise is neither fulfilled or rejected, it's pending
+
+### JavaScript Concurrency: Event loops
+
+- browsers have complex event loops that handle promises, `setTimeout`s and other async code
