@@ -126,3 +126,44 @@
 ### JavaScript Concurrency: Event loops
 
 - browsers have complex event loops that handle promises, `setTimeout`s and other async code
+
+## 16/9/21
+
+### JavaScript Concurrency: Async await
+
+- callbacks let us call a function later
+- promises are built on callbacks
+- but also let us wait for multiple promises with `Promise.all`
+- and abort operations with rejections
+- and recover from rejections etc
+- async/await is the third major concurrency system is JS
+- it doesn't have new capabilities
+- it makes promise code easier to read a write
+- to use `await`, we have to define an `async function(){}`
+- `await` only works with `async`
+- `async` is only useful if we use `await`
+- async/await still returns a promise
+- but you don't have to use `then`s which makes code more readable
+- with promises you have to write code in a backward order but with async/await we can write code like we normally would
+- we can await promises inside async functions and then use the values in normal code
+- the async function will still return a promise though
+
+### JavaScript Concurrency: Promise.allSettled
+
+- `Promise.all` will reject as soon as any promise in it rejects
+- `Promise.allSettled` will wait for all of them to settle
+- `Promise.all` will reject with the first rejection reason in time
+- `Promise.allSettled` uses objects to indicate status and value/reason for fulfilled/rejected promises
+- both these functions are often used in prod
+- useful when making multiple API requests or writing multiple changes to a database
+- `Promise.all` is more common as we usually want things to fail if something goes wrong
+
+### JavaScript Concurrency: Canceling promises
+
+- JS doesn't have support for cancelling async code
+- once you have a `then` attached to a promise, there's no way to stop it
+- sometimes we need to cancel an operation and we have to implement that ourselves
+- one way is to have a canceled flag that is checked, if it's `true` when the `then` runs, we cancel the work
+- the cancellation check can be put in a function, an exception can be thrown if the check is true
+- you could also have the canceled flag in a database
+- some libraries, like Bluebird, have support for cancellation
