@@ -167,3 +167,64 @@
 - the cancellation check can be put in a function, an exception can be thrown if the check is true
 - you could also have the canceled flag in a database
 - some libraries, like Bluebird, have support for cancellation
+
+### SQL: Basic tables
+
+- SQL manages data
+- data is stored in tables made up of columns
+- we can `CREATE` a table
+- `INSERT` data into it
+- and `SELECT` data out
+- `SELECT *` means give all the columns
+- `SELECT` always returns an array of objects
+- always returns an array, even if there is only 1
+- if there is nothing, `SELECT` return `[]`
+- a table can have as many columns as you like
+- all SQL statements return arrays
+- `CREATE` and `INSERT` just return `[]`
+- SQLite's `TEXT` type is used to store strings in columns, these type vary from db to db
+- SQL keywords ignore casing and so do table and column names
+- common convention is UPPERCASE for keywords, and lower_snake_case for tables and columns
+- SQL does respect case within strings
+- inserting into a column that doesn't exists throws an error
+- any operation on a column that doesn't exist errors
+
+### SQL: Basic column types
+
+- SQL supports other column types
+- `INTEGER` is whole numbers
+- `REAL` are real numbers stored as IEEE double precision floating point numbers, like the `number` type in JS
+- when querying `INTEGER` or `REAL` columns, the value comes back as a JS number
+- data types help make sure that data is valid
+- this is one of the best things about SQL databases, we get errors when we try to write invalid data
+
+### SQL: Selecting columns
+
+- `*` in `SELECT *` means all columns
+- we can also only ask for the columns we care about
+- good way to reduce network traffic
+- still get an array of rows where each row is an object
+- can select multiple columns by separating them with commas
+
+### SQL: Select where
+
+- dbs can have huge numbers of rows
+- `SELECT ... WHERE /* condition */` returns only rows where the condition is true
+- the standard equality operator is `=`
+- you can use different columns with `WHERE` and `SELECT` in the same operation
+- when multiple rows match, they're all returned
+- SQL supports comparison operators `<` and `>`
+- most SQL databases support `!=`, `<>` is the same
+- `AND` and `OR` can be used to select by multiple columns
+- `WHERE` can match multiple rows
+- `WHERE` clauses can call functions
+- SQLite has a `length` function that can be used on strings
+- PostgresSQL has hundreds
+- you can define your own
+
+### SQL: No type enforcement in SQLite
+
+- SQLite is different to other dbs
+- it doesn't enforce column types, you can put and integer into a text column
+- everything inserted into a text column is converted into a string
+- most dbs do enforce types
