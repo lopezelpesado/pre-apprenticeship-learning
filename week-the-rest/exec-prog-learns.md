@@ -228,3 +228,52 @@
 - it doesn't enforce column types, you can put and integer into a text column
 - everything inserted into a text column is converted into a string
 - most dbs do enforce types
+
+## 17/9/21
+
+### JavaScript Concurrency: Sleep
+
+- async code can "sleep" (wait an amount of time while doing nothing)
+- where possible, separate code that uses promise constructor
+- sleep functions are very common
+- can be used to delay visual feedback or wait before trying again
+
+### JavaScript Concurrency: Multiple awaits
+
+- async functions can contain more than one `await`
+- can be used to clean up nested promises
+
+### JavaScript Concurrency: Control flow with async/await
+
+- control flow with promises can be implemented with conditionals in `then` callbacks
+- this gets awkward with nesting
+- await allows us to use normal conditionals without `then`
+
+### SQL: Null
+
+- SQL supports null, the absence of a value
+- when a column is allowed to be null it is called nullable
+- usually all columns are nullable unless specified otherwise
+- most dbs do this
+- adding `NOT NULL` to a column declaration indicates to the db that a column shouldn't allow null
+- `NOT NULL` is important
+- SQL dbs won't let you change a column to be `NOT NULL` if it already contains some `NULL`
+- once you have unexpected nulls in a db, there is not good way of fixing them
+- best to make it not possible in the first place
+- best to make columns `NOT NULL` unless you have a very good reason not to
+- best to explicitly label nullable columns with `NULL`
+
+### SQL: Updating rows
+
+- `UPDATE` is used to update rows that already exist
+- tell it which columns to change with `SET`
+- it defaults to updating every row in the entire column
+- to update only certain records, we can use `WHERE`
+- if the `WHERE` clause in the `UPDATE` matches multiple rows, all will be updated
+- be careful to only update what you want to
+
+### SQL: No booleans in SQLite
+
+- most dbs support booleans natively
+- SQLite doesn't
+- instead use INTEGER columns with 0 meaning false and 1 meaning true
