@@ -305,3 +305,57 @@
 - `async` functions always return promises
 - returning a promise in an async will just return the promise, even if it rejects
 - always await the promise before returning to be able to catch exceptions if the promise rejects
+
+### SQL: Selecting expressions
+
+- you can `SELECT` lots of expressions including columns
+- you can also `SELECT` constants, mathematical expressions and function calls
+- `SELECT 1 + 1` returns `[{'1 + 1': 2}]`
+- output is always an array of objects
+- props on the row are the expression we selected
+- value is the result
+- can also query functions that return dynamic values
+- in SQLite, the date is `DATE('now')` which is the date after `DATE(0)` (1/1/1970)
+
+### SQL: Unique constraints
+
+- most SQL dbs enforce column types preventing errors
+- there are other constraints like unique values only
+- `UNIQUE` keyword tells the db to enforce this
+- only affects the column it's used on
+- you can apply uniqueness to combinations of columns
+- you define this at table definition after the column list
+- `CREATE TABLE emails (username TEXT, domain TEXT, UNIQUE (username, domain))`
+- uniqueness constraints are very important
+- constraints, like uniqueness and `NOT NULL`, are an important concept in dbs
+- they help prevent bugs that would insert invalid data into the db
+- enforcing these constraints is the main job of a SQL db
+- the db always checks against constraints before making any change to data
+- constraints are also enforced with `UPDATE`
+
+### SQL: Deleting rows
+
+- `DELETE` deletes
+- by default, it deletes everything
+- great
+- be careful with it
+- can use `WHERE` clause
+- if multiple rows match the clause, they'll all be deleted
+
+### SQL: Defaults
+
+- normally you have to specify all of the columns when inserting a row
+- we can define defaults for columns so we don't have to do this
+- define with column definitions with `DEFAULT` and then the default value
+- when defining columns, type has to come directly after the name of the column
+- `NULL` declarations and defaults can be switched around
+- specifying a value when inserting into a column with a default value will overwrite the default with the specified value
+
+### SQL: Inserting multiple rows
+
+- when you insert many rows with separate `INSERT` statements, you put a heavy load on a db
+- with each request the db has to do lots of different things
+- you can mitigate this cost with multi row inserts
+- these are written with multiple rows of data after `VALUES`
+- this means the db only has to do the associated tasks once for all the new data
+- db still enforces constraints
