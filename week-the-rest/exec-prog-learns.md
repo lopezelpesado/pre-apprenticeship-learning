@@ -277,3 +277,31 @@
 - most dbs support booleans natively
 - SQLite doesn't
 - instead use INTEGER columns with 0 meaning false and 1 meaning true
+
+## 20/9/21
+
+### JavaScript Concurrency: Async/await gotchas
+
+- can't use `await` outside an `async function`
+- this will cause a syntax error
+- you can have an `async` function without an `await`, the return will be a promise
+- you can `await` non promise stuff, you get the value immediately
+- sometimes you want to do this, this will work if the value is not a promise and if it is
+
+### JavaScript Concurrency: Async/await in arrow functions
+
+- async/await works with arrow functions
+- `async` is put before the parameters
+- `await` goes in the body as normal
+- otherwise they work exactly the same as regular functions
+
+### JavaScript Concurrency: Error handling in async functions
+
+- throwing an exception in a `then` causes a promise to reject
+- the exception is turned into a rejected promise
+- if you `await` a rejected promise, you get the reverse
+- the rejection reason is thrown as a normal JS exception which can be caught
+- if the exception is not caught, it's turned into a regular rejected promise
+- `async` functions always return promises
+- returning a promise in an async will just return the promise, even if it rejects
+- always await the promise before returning to be able to catch exceptions if the promise rejects
