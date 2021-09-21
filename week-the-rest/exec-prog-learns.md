@@ -359,3 +359,48 @@
 - these are written with multiple rows of data after `VALUES`
 - this means the db only has to do the associated tasks once for all the new data
 - db still enforces constraints
+
+## 21/9/21
+
+### SQL: Column aliases
+
+- columns can be renamed with `AS`
+- the result object will use the alias instead of the OG name
+- useful in complex queries with multiple tables
+- useful for maths queries and cleaning up their results
+- allows us to avoid retyping complicated expressions
+
+### SQL: Primary keys
+
+- most dbs have numerical ids to solve the problem of 2 different things having the same name, like to be able to distinguish between 2 people with the same name
+- most real world tables have integer ids for ease of reference
+- it's better to let the db assign ids for us
+- we can do that by making the id column a `PRIMARY KEY`
+- in a db, a key is a column or set of columns that are always unique
+- if you put a uniqueness constraint on a column, that makes it a key
+- if the constraint requires 2 columns together to be unique, that makes them a key
+- db systems don't usually care about keys but people do
+- dbs do care about primary keys
+- the primary key is a key we've declared as the main key for the column
+- usually an integer column named id
+- making a column a primary key automatically makes it `UNIQUE`
+- in most dbs they are also `NOT NULL`
+- in SQLite, primary keys are nullable
+- to avoid this, make the primary key `NOT NULL`
+- most primary keys are auto-incrementing ids, increase by 1 automatically
+- in SQLite, `INTEGER PRIMARY KEY` auto-increments
+- some dbs require you to specify that
+- SQLite will ignore nulls for `INTEGER PRIMARY KEY` and auto-increment instead
+- a table can only have 1 primary key
+- trying to create 2 in 1 table will error
+- most auto-incrementing integer keys start at 1
+
+### SQL: Dropping tables and columns
+
+- if you `DELETE` all the data in a table, the table itself will still exist
+- sometimes it is better to just destroy the table itself
+- you can remove a table by `DROP`ing it
+- you can't access a dropped table because it no longer exists, you'll error
+- deleting is always about data, dropping is about db structure as it removes tables
+- in most dbs, you can drop single columns from tables
+- there are other things you can drop too
