@@ -404,3 +404,89 @@
 - deleting is always about data, dropping is about db structure as it removes tables
 - in most dbs, you can drop single columns from tables
 - there are other things you can drop too
+
+## 22/9/21
+
+### SQL: Bind parameters
+
+- SQL is always combined with other languages like JS
+- `?` is to indicate a parameter to be provided
+- can have more than 1 `?`, if we do, we'll have to provide multiple values to fill the parameters
+- you can use bind params to write functions in JS to fetch and process data from a db
+- the values in the array are called bind params
+- the `?` are holes, the parameters are bound to those holes
+- we can ref a bind param multiple times with `?1`, referring to the 1st bind param at index 0
+- syntax varies between dbs, PostgreSQL uses `$1` etc
+- the query function in Node's PostgreSQL API is called `query`
+- all SQL dbs support bind params in some form
+
+### SQL: Comments
+
+- comments begin with `--`
+- everything from the `--` to the end of the line are ignored
+- also support C-style `/* */` comments which can span multiple lines
+
+### SQL: Comparing with null
+
+- `NULL` has some sharp edges in SQL
+- math ops on `NULL` return `NULL`
+- comparing anything with `NULL` returns `NULL`, even `NULL = NULL`
+- SQL has `IS/IS NOT NULL` that can check for `NULL`
+- usually find these checks in `WHERE`s
+- dbs handle `NULL` differently
+- SQLite handles `NULL` similarly to most other dbs
+
+### SQL: Selecting expressions from tables
+
+- when `SELECT`ing from a table, you can select expressions computed from the table's columns
+- in jS we concat strings with `'a' + 'b'`
+- in SQLite, concat with `||`
+- this is similar to or in JS but in SQL or is `OR`
+- modifying a result with `SELECT` doesn't change the data because `SELECT` can't change data
+- safe to hack away at a db with `SELECT`
+- SQL dialects have more built in operators than other languages
+- aside from the usual suspects, SQL also has `BETWEEN` which replaces a query like `x >= y and x <= z` with `x BETWEEN y AND z`
+- the `AND` here is not a logical and, it is part of the `BETWEEN` syntax
+- SQL uses huge numbers of language keywords, instead of providing functions
+
+### Regular Expressions: Literals
+
+- regexes are patterns that describe strings
+- we can ask if a regex matches a given string with `regex.test(string)`, returns a boolean
+- regexes are case sensitive
+- multi-char regexes test if the characters appear together
+- have to be adjacent, no chars between them
+- spaces are treated as normal chars
+- some punctuation in regexes have special meaning
+
+### Regular Expressions: Wildcard
+
+- regexes like `/a/` are literal, they have to match exactly
+- regexes are powerful because of operators
+- `.` is the wildcard operator and matches any character
+- it won't match an empty string
+- `/./` does not match newlines
+- putting a `.` next to another char means that they occur consecutively
+- multiple `.` can match different chars
+
+### Regular Expressions: Boundaries
+
+- boundaries allow us to match at the beginning and end of strings
+- `^` means the beginning of a string
+- `$` means the end
+- usually we want to match a whole string, most regexes include these boundaries
+- use both on their own to match an empty string
+- there are no errors, regexes always return `false`
+- using boundaries in the wrong place will return false
+
+### Regular Expressions: Repetition
+
+- `+` requires something to occur one or more times
+- `+` works with `.`
+- `*` means zero or more times
+- can use these operators multiple times in a regex
+
+### Regular Expressions: Or
+
+- sometimes we need to allow multiple alternatives
+- we separate them with `|` ('or')
