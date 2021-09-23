@@ -490,3 +490,48 @@
 
 - sometimes we need to allow multiple alternatives
 - we separate them with `|` ('or')
+
+## 23/9/21
+
+### Regular Expressions: Hex codes
+
+- text is stored as numbers
+- we can write those numbers as hex codes
+- regex and most languages use the 'x' syntax to indicate a hex code
+- `x41` is A, for example
+- `\x` can only be followed by 2 hex digits, anything after is a different part of the regex
+- `\x` with only one digit after will handle the x as a literal x
+- hex digits can be any of 0-9, a-f, A-F, if we use anything else the `\x` will treat the x as a literal x
+
+### Regular Expressions: Parens
+
+- you can use parentheses to group operators together
+- example, `/^a|b$/` means a at the start or b at the end, same as `/(^a)|(b$)/` whereas `/^(a|b)$/` means starts and ends with an a or b
+- parens can factor out common elements
+- `/^p(ng|df)$/` will match pdf and png
+- either side of an `|` can be empty which means exactly the letter or an empty string
+
+### Regular Expressions: Escaping
+
+- most languages are delimited with "double quotes"
+- to put literal " in a string we need to escape it like this `"\""`
+- operators can be used literally with `\`, like `\+` for literal +
+
+### SQL: Multiple statements
+
+- you cna separate statements with `;`
+- only data from the last statement will be returned
+- later statements will always see changes made by earlier statements
+- usually `;` works like calling `exec` multiple times
+- except with bind params
+- many db APIs don't let you use `;` with bind params
+
+### SQL: Null in unique constraints
+
+- `NULL` values are ignored by a `UNIQUE` constraint
+
+### SQL: Referencing other tables
+
+- data can relate to other data
+- you can store data in other data but this gives up SQL's value
+- you can combine db queries to multiple tables with JS
